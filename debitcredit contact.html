@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debit Credit Pro - Financial Staffing Solutions</title>
+    <link rel="stylesheet" href="debitcreditpro.css">
+   
+</head>
+<body>
+     <!-- Fixed Header Navigation -->
+
+    
+     <header>
+      <div class="logo">
+          <img src="Debitlogo.jpg" alt="Debit Credit Logo" width="500" height="200"> 
+      </div>
+      <nav>
+         
+        <ul class="menu">
+            <li><a href="debit credit pro.html">Home</a></li>
+            <li class="dropdown">
+                <a href="debitcredit about.html">About ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="debitcredit commitment.html">Our Commitment</a></li>
+                    <li><a href="debitcredit mission.html">Mission</a></li>
+                    <li><a href="debitcredit testimonial.html">Testimonials</a></li>
+                    <li><a href="debitcredit corevalues.html">Core Values</a></li>
+                    <li><a href="debitcredit faq.html">FAQs</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="debitcredit service.html">Services ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="accountingjob.html">Remote Jobs</a></li>
+                    <li><a href="debit credit why choose us.html">Why Choose Us</a></li>
+                </ul>
+            </li>
+            <li><a href="debitcredit contact.html">Contact</a></li>
+        </ul>
+        
+</header>
+  <hr>
+<!-- Application Form Section -->
+<section id="sheetform">
+    <div class="container">
+      <!-- Form Header -->
+      <div class="form-header">
+        <h2>"Cost-Effective, Skilled, and Reliable – Your Remote Workforce, Delivered."</h2>
+        <h1>Let's work together!</h1>
+        <p>Fill out some info and we will be with you every step of the way! We can't wait to hear from you!</p>
+      </div>
+  
+      <!-- Success/Error Message -->
+      <div id="msg"></div>
+  
+      <!-- Form -->
+      <form id="jobForm">
+        <input type="hidden" name="formType" value="jobApplication">
+        
+        <div class="input-group">
+          <input type="text" name="name" id="nameInput" placeholder=" " required>
+          <label for="nameInput">Full Name</label>
+        </div>
+  
+        <div class="input-group">
+          <input type="email" name="email" id="emailInput" placeholder=" " required>
+          <label for="emailInput">Email Address</label>
+        </div>
+  
+        <div class="input-group">
+          <input type="tel" name="phone" id="phoneInput" placeholder=" " required>
+          <label for="phoneInput">Phone Number</label>
+        </div>
+  
+        <div class="input-group">
+          <input type="text" name="address" id="addressInput" placeholder=" " required>
+          <label for="addressInput">Mailing Address</label>
+        </div>
+  
+        <div class="input-group">
+          <input type="text" name="services" id="servicesInput" placeholder=" " required>
+          <label for="servicesInput">Services Interested</label>
+        </div>
+  
+        <div class="input-group">
+          <textarea name="message" id="messageInput" placeholder=" " rows="5" required></textarea>
+          <label for="messageInput">Your Message</label>
+        </div>
+  
+        <button type="submit">Send</button>
+      </form>
+    </div>
+    
+ 
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzkUtnxeDKVZiGGkfAlNNtKEc6r_aDLn1IExhMS3whdofWrLso1vz-Piasu4z3widhrOg/exec';
+    
+    document.getElementById('jobForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const msgDiv = document.getElementById('msg');
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalText = submitBtn.innerHTML;
+    
+    submitBtn.innerHTML = '<div class="spinner"></div> Sending...';
+    submitBtn.disabled = true;
+    msgDiv.classList.remove('success', 'error', 'show'); // Reset message state
+    
+    try {
+        const formData = new URLSearchParams(new FormData(form));
+        
+        const response = await fetch(scriptURL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: formData
+        });
+    
+        if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+        
+        const result = await response.json();
+        
+        if (result.status === "success") {
+            form.reset();
+            msgDiv.textContent = '✅ Application Submitted Successfully!';
+            msgDiv.classList.add('success', 'show'); // Add 'show' class
+        } else {
+            throw new Error(result.message || 'Submission failed');
+        }
+    } catch (error) {
+        msgDiv.textContent = `❌ Error: ${error.message}`;
+        msgDiv.classList.add('error', 'show'); // Add 'show' class
+    } finally {
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+        setTimeout(() => {
+            msgDiv.classList.remove('success', 'error', 'show'); // Hide message after 5 seconds
+            msgDiv.textContent = '';
+        }, 4000);
+    }
+});
+    </script>
+</section>
+</body>
+</html>
