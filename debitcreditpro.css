@@ -1,58 +1,42 @@
 /* Header (Static Position) */
 header {
-  display: flex;
-  justify-content:left;
-  align-items: center;
-  padding: 15px 10px;
-  width: 100%;
+  position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000;
-  position:fixed; /* Keeps the header at the top but doesn't move when scrolling */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  font-size: 14px;
-background-image: url(b3.png);
-background-repeat: no-repeat;
-background-size: cover;
+  width: 100%;
+  background-image: url(b3.png);
+  background-size: cover;
+  background-repeat: no-repeat;
   background-attachment: fixed;
-  color :orange;
-  text-align: center;
-
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 15px 20px;
+  z-index: 1000;
 }
 
-
-/* Logo */
-.logo {
+.header-container {
   display: flex;
-  align-items:center;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
 .logo img {
-  width: 200px;
+  width: 180px;
   height: auto;
-  margin-right: 10px;
 }
 
-.logo span {
-  font-size: 22px;
-  font-weight: bold;
-  color: white;
-}
-
-/* Navigation Menu */
 .menu {
   list-style: none;
-  padding: 0;
-  margin: 0;
   display: flex;
   gap: 20px;
+  padding: 0;
+  margin: 0;
 }
 
 .menu li {
   position: relative;
 }
 
-/* Top-Level Menu Items */
 .menu li a {
   text-decoration: none;
   color: black;
@@ -62,7 +46,12 @@ background-size: cover;
   display: inline-block;
 }
 
-/* Dropdown Menu (Hidden by Default) */
+.menu li a:hover {
+  color: yellow;
+  border-radius: 5px;
+}
+
+/* Dropdown Styling */
 .dropdown-menu {
   list-style: none;
   position: absolute;
@@ -73,41 +62,23 @@ background-size: cover;
   border-radius: 5px;
   display: none;
   min-width: 180px;
-  align-items: center;
-  justify-content: center;
 }
 
-/* Dropdown Menu Links */
-.dropdown-menu li {
-  width: 100%;
-}
-
-.dropdown-menu li a {
-  color:black;
-  background-color: #2088ef;
-  padding: 5px;
-  display: block;
-  text-align: left;
-  font-size: 18px;
-}
-
-/* Show Dropdown Menu on Hover */
 .dropdown:hover .dropdown-menu {
   display: block;
 }
 
-/* Hover Effects */
-.menu li a:hover {
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .header-container {
+      flex-direction: column;
+  }
 
-  color : yellow;
-  border-radius: 5px;
+  .menu {
+      flex-direction: column;
+      align-items: center;
+  }
 }
-
-.dropdown-menu li a:hover {
- 
-  color: yellow; 
-}
-
 
 /* Video Section */
 #home {
