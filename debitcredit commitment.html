@@ -5,73 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Debiit Credit Pro - Financial Staffing Solutions</title>
     <link rel="stylesheet" href="debitcreditpro.css">
-    <style>
-        body {
-    padding-top:230px; /* Adjust based on header height */
-}
-        #commitment {
-            background-image: url(b4.png);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-attachment: fixed;
-            padding: 4rem 1rem; /* Added padding for spacing */
-            position: relative;
-            z-index: 1;
-        }
-    
-        /* Center headings in the commitment section */
-        #commitment h2 {
-            text-align: center;
-            margin: 2rem 0;
-            width: 100%;
-            padding: 0 15px; /* Prevent text touching edges on mobile */
-        }
-    
-        /* Decorative elements */
-        #commitment h2::after {
-            content: '';
-            display: block;
-            width: 50px;
-            height: 3px;
-            background: #3498db;
-            margin: 1rem auto;
-        }
-    
-        /* Content container */
-        #commitment .content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-            background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-    
-        /* Paragraph styling */
-        #commitment p {
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-            padding: 0 15px;
-        }
-    
-        /* HR styling */
-        #commitment hr {
-            border: 0;
-            height: 2px;
-            background: rgba(52, 152, 219, 0.3);
-            margin: 2rem auto;
-            width: 80%;
-        }
-    
-        /* Animation */
-        #commitment h2 {
-            transition: transform 0.3s ease;
-        }
-    
-        #commitment h2:hover {
-            transform: scale(1.02);
-        }
-    </style>
    
 </head>
 <body>
@@ -79,35 +12,47 @@
 
    
      <header>
-        <div class="logo">
-            <img src="Debitlogo.jpg" alt="Debit Credit Logo" width="500" height="200"> 
+        <div class="header-container">
+            <div class="logo">
+                <img src="Debitlogo.jpg" alt="Debit Credit Logo">
+            </div>
+            <div class="hamburger">☰</div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="debit credit pro.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="debitcredit about.html">About ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="debitcredit commitment.html">Our Commitment</a></li>
+                            <li><a href="debitcredit mission.html">Mission</a></li>
+                            <li><a href="debitcredit testimonial.html">Testimonials</a></li>
+                            <li><a href="debitcredit corevalues.html">Core Values</a></li>
+                            <li><a href="debitcredit faq.html">FAQs</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="debitcredit service.html">Services ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="accountingjob.html">Remote Jobs</a></li>
+                            <li><a href="debit credit why choose us.html">Why Choose Us</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="debitcredit contact.html">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-           
-          <ul class="menu">
-              <li><a href="debit credit pro.html">Home</a></li>
-              <li class="dropdown">
-                  <a href="debitcredit about.html">About ▾</a>
-                  <ul class="dropdown-menu">
-                      <li><a href="debitcredit commitment.html">Our Commitment</a></li>
-                      <li><a href="debitcredit mission.html">Mission</a></li>
-                      <li><a href="debitcredit testimonial.html">Testimonials</a></li>
-                      <li><a href="debitcredit corevalues.html">Core Values</a></li>
-                      <li><a href="debitcredit faq.html">FAQs</a></li>
-                  </ul>
-              </li>
-              <li class="dropdown">
-                  <a href="debitcredit service.html">Services ▾</a>
-                  <ul class="dropdown-menu">
-                      <li><a href="accountingjob.html">Remote Jobs</a></li>
-                      <li><a href="debit credit why choose us.html">Why Choose Us</a></li>
-                  </ul>
-              </li>
-              <li><a href="debitcredit contact.html">Contact</a></li>
-          </ul>
-          
-  </header>
-
+    </header>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const hamburger = document.querySelector(".hamburger");
+            const menu = document.querySelector(".menu");
+            
+            hamburger.addEventListener("click", function() {
+                menu.classList.toggle("active");
+            });
+        });
+    </script>
 <section id="commitment">
     <div class="content">
         <h2>Technology-Driven Financial Management</h2>
