@@ -236,17 +236,15 @@ header {
       font-size: 1.5rem;
   }
 }
-/*commitment*/
-
+/* Commitment Section */
 #commitment {
   background-image: url(b4.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  padding: 4rem 1rem;
+  padding: 4rem 2rem;
   position: relative;
   z-index: 1;
-  
 }
 
 #commitment h2 {
@@ -255,58 +253,69 @@ header {
   margin: 2rem 0;
   width: 100%;
   padding: 0 15px;
+  font-size: 2.5vw; /* Makes it scale dynamically */
 }
 
 #commitment .content {
-  max-width: 1200px;
+  max-width: 90%;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2.5rem;
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
+/* Paragraph Styling */
 #commitment p {
   margin-bottom: 1.5rem;
-  line-height: 1.6;
-  padding: 0 15px;
+  line-height: 1.8;
+  padding: 0 20px;
   text-align: justify;
   text-indent: 2em;
+  font-size: 1.1rem;
 }
 
 /* Responsive Commitment Section */
+@media (max-width: 1024px) {
+  #commitment {
+      padding: 3.5rem 1.5rem;
+  }
+  #commitment h2 {
+      font-size: 2rem;
+  }
+  #commitment .content {
+      max-width: 95%;
+  }
+  #commitment p {
+      font-size: 1rem;
+  }
+}
+
 @media (max-width: 768px) {
   #commitment {
       padding: 3rem 1rem;
-      padding-top: 180px;
+      padding-top: 160px;
   }
-  .content {
+  #commitment h2 {
+      font-size: 1.8rem;
+  }
+  #commitment .content {
       padding: 1.5rem;
-  }
-  h2 {
-      font-size: 1.5rem;
-  }
-  p {
-      font-size: 1rem;
   }
 }
 
 @media (max-width: 480px) {
   #commitment {
-      padding: 2rem 1rem;
-      padding-top: 150px;
+      padding: 2.5rem 1rem;
+      padding-top: 140px;
   }
-  h2 {
-      font-size: 1.3rem;
+  #commitment h2 {
+      font-size: 1.5rem;
   }
-  p {
+  #commitment p {
       font-size: 0.9rem;
   }
-  .logo img {
-      width: 140px;
-  }
 }
-
 /*mission statement*/
 /* about us*/
 body {
