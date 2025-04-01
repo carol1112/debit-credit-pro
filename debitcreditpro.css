@@ -48,7 +48,7 @@ header {
 }
 
 .menu li a:hover {
-  color: yellow;
+  color:red;
   border-radius: 5px;
 }
 
@@ -74,7 +74,7 @@ header {
   display: none;
   font-size: 28px;
   cursor: pointer;
-  color: white;
+  color: black;
 }
 
 /* Responsive Design */
@@ -213,7 +213,12 @@ header {
       padding: 20px;
       margin: 40px auto;
   }
-
+ .about-content p{text-align: justify; /* Justifies the text */
+  text-indent: 2em; /* Adds an indentation of 2em (adjust as needed) */}
+  
+  .highlight-block p{ text-align: justify; /* Justifies the text */
+    text-indent: 2em; /* Adds an indentation of 2em (adjust as needed) */}
+  
   .about-image {
       flex: none;
       max-width: 100%;
@@ -237,7 +242,7 @@ header {
   padding: 4rem 1rem;
   position: relative;
   z-index: 1;
-  padding-top: 210px;
+  
 }
 
 #commitment h2 {
@@ -252,7 +257,7 @@ header {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
-  background: rgba(255, 255, 255, 0.9);
+  background: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -304,7 +309,12 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background-color: #fff;
+  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
 }
 
 .about-section {
@@ -363,7 +373,7 @@ body {
 }
 
 /*background image*/
-#about{
+#about {
   text-align: center;
   background-image: url(b6.png);
   background-repeat: no-repeat;
@@ -371,36 +381,34 @@ body {
   background-attachment: fixed;
 }
 
- #mission h2
- {color:blue;
-   padding: 20px;
-   margin: 50px auto;
-   text-align:center;
- 
- font: size 40px;}
+#mission h2 {
+  color: blue;
+  padding: 20px;
+  margin: 50px auto;
+  text-align: center;
+  font-size: 40px;
+}
 
- #mission p{
-  text-align:justify; /* Justifies the text */
-  text-indent: 1em;text-align: center;
-   margin: 40px auto;}
+#mission p {
+  text-align: justify;
+  text-indent: 1em;
+  margin: 40px auto;
+}
 
- #about-us p{
-   text-align: justify; /* Justifies the text */
-   text-indent: 2em; /* Adds an indentation of 2em (adjust as needed) */
-   margin: 30px auto;
-   max-width: 800px;
-   padding: 10px;
-   max-width: 800px;
-   }
-   #about-us{
-    text-align: center;
-    background-image: url(b4.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-  }
+#about-us {
+  text-align: center;
+  background-image: url(b4.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
 
-
+#about-us p {
+  text-align: justify;
+  text-indent: 2em;
+  margin: 30px auto;
+  max-width: 800px;
+  padding: 10px;}
 
   /* Core Values Section */
 #corevalues {
