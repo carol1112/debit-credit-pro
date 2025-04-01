@@ -51,6 +51,7 @@
         });
     </script>
     <!-- testimonials -->
+     <hr>
     <section id="testimonial">
         <h2>What Our Clients Say</h2>
         <div class="testimonial-container">
@@ -68,10 +69,10 @@
                     <h4>- Mark Wilson</h4>
                 </div>
             </div>
-            <button class="prev">❮</button>
-            <button class="next">❯</button>
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
         </div>
-   
+    </section>
   
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -79,53 +80,44 @@
             const testimonials = document.querySelectorAll('.testimonial');
             const total = testimonials.length;
             let autoSlideInterval;
-  
+    
             function updateTestimonials() {
                 testimonials.forEach((testimonial, index) => {
-                    testimonial.classList.remove('active', 'prev', 'next');
-                    
+                    testimonial.classList.remove('active');
                     if (index === currentIndex) {
                         testimonial.classList.add('active');
                     }
-                    if (index === (currentIndex + 1) % total) {
-                        testimonial.classList.add('next');
-                    }
-                    if (index === (currentIndex - 1 + total) % total) {
-                        testimonial.classList.add('prev');
-                    }
                 });
             }
-  
+    
             function nextSlide() {
                 currentIndex = (currentIndex + 1) % total;
                 updateTestimonials();
             }
-  
+    
             function prevSlide() {
                 currentIndex = (currentIndex - 1 + total) % total;
                 updateTestimonials();
             }
-  
+    
             document.querySelector('.prev').addEventListener('click', prevSlide);
             document.querySelector('.next').addEventListener('click', nextSlide);
-  
+    
             function startAutoSlide() {
-                autoSlideInterval = setInterval(nextSlide, 3000);
+                autoSlideInterval = setInterval(nextSlide, 4000);
             }
-  
+    
             function stopAutoSlide() {
                 clearInterval(autoSlideInterval);
             }
-  
-            // Pause auto-slide on hover
+    
             document.querySelector('.testimonial-container').addEventListener('mouseenter', stopAutoSlide);
             document.querySelector('.testimonial-container').addEventListener('mouseleave', startAutoSlide);
-  
-            // Initialize slider
+    
             updateTestimonials();
             startAutoSlide();
         });
     </script>
-  </section>
+    
 </body>
 </html>
