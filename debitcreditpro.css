@@ -548,7 +548,7 @@ section + #corevalues {
   }
 }
 
-/*services*/
+/*services section*/
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
@@ -671,68 +671,95 @@ body {
   }
 }
 
+/*why choose us section*/
+
+.why-choose-us {
+  padding: 100px 20px;
+  background-image: url(b4.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.why-choose-us h2 {
+  font-size: 2.5rem;
+  color: blue;
+  margin-bottom: 40px;
+}
+
+.reasons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.reason {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.reason:hover {
+  transform: translateY(-10px);
+}
+
+.reason .icon {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.reason h3 {
+  font-size: 1.5rem;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.reason p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
   .why-choose-us {
-    padding: 100px 20px;
-   background-image: url(b4.png);
-   background-repeat: no-repeat;
-   background-size: cover;
-    text-align: center;
+      padding: 80px 20px;
   }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
   .why-choose-us h2 {
-    font-size: 2.5rem;
-    color: blue;
-    margin-bottom: 40px;
+      font-size: 2.2rem;
   }
-  
+}
+
+@media (max-width: 768px) {
   .reasons-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-  }
-  
-  .reason {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-  }
-  
-  .reason:hover {
-    transform: translateY(-10px);
-  }
-  
-  .reason .icon {
-    font-size: 2rem;
-    margin-bottom: 15px;
-    display: block;
-  }
-  
-  .reason h3 {
-    font-size: 1.5rem;
-    color: #222;
-    margin-bottom: 10px;
-  }
-  
-  .reason p {
-    font-size: 1rem;
-    color: #555;
-    line-height: 1.6;
-  
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .reasons-grid {
       grid-template-columns: 1fr;
-    }
   }
+  .why-choose-us h2 {
+      font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .why-choose-us {
+      padding: 60px 15px;
+  }
+  .why-choose-us h2 {
+      font-size: 1.8rem;
+  }
+  .reason {
+      padding: 15px;
+  }
+}
 
     
 /*FAQS*/
@@ -741,7 +768,9 @@ body {
   background-color: #fff;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
+
 .faq-section {
   display: flex;
   justify-content: center;
@@ -750,6 +779,7 @@ body {
   padding: 20px;
   background-color: #f8f9fa;
 }
+
 .container {
   max-width: 700px;
   width: 100%;
@@ -758,43 +788,83 @@ body {
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-.container h2{color:blue;}
 
-h2 {
-  text-align: center;
+.container h2 {
   color: blue;
+  text-align: center;
+  font-size: 2rem;
 }
+
 .faq {
   border-bottom: 1px solid #ddd;
   padding: 10px 0;
 }
+
 .question {
   font-weight: bold;
   cursor: pointer;
-  color:white;
+  color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .question:hover {
   color: #0056b3;
 }
+
 .answer {
   display: none;
   padding-top: 5px;
   color: #0056b3;
   max-height: 0;
   overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
 }
+
 .faq.active .answer {
   display: block;
   max-height: 200px;
 }
+
 .toggle-icon {
   transition: transform 0.3s;
 }
+
 .faq.active .toggle-icon {
   transform: rotate(180deg);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .container {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 95%;
+    padding: 15px;
+  }
+  .container h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+  }
+  .container h2 {
+    font-size: 1.6rem;
+  }
+  .question {
+    font-size: 1rem;
+  }
+  .answer {
+    font-size: 0.9rem;
+  }
 }
 
   /*read more btn job lists*/
@@ -971,6 +1041,21 @@ li {
   color: white;
 }
 
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .testimonial-container {
+      padding: 0 30px;
+  }
+  .testimonial {
+      width: 85%;
+      padding: 25px;
+  }
+  .prev, .next {
+      padding: 9px 13px;
+      font-size: 19px;
+  }
+}
+
 @media (max-width: 768px) {
   .testimonial-container {
       padding: 0 20px;
@@ -985,6 +1070,28 @@ li {
   }
 }
 
+@media (max-width: 480px) {
+  #testimonial {
+      padding: 40px 15px;
+  }
+  .testimonial-container {
+      padding: 0 10px;
+  }
+  .testimonial {
+      width: 95%;
+      padding: 15px;
+  }
+  .testimonial p {
+      font-size: 1em;
+  }
+  .testimonial h4 {
+      font-size: 0.9em;
+  }
+  .prev, .next {
+      padding: 7px 10px;
+      font-size: 16px;
+  }
+}
 
 /* Center the Form Container */
 
@@ -1400,12 +1507,32 @@ hr.hr-gradient {
 .compliance { background-color: #2c3e50; }
 
 @media (max-width: 768px) {
-    .grid-container {
-        grid-template-columns: 1fr;
-    }
-    
-    h2 {
-        font-size: 2rem;
-        margin: 1rem 0; /* Adjusted margin for smaller screens */
-    }
+  .grid-container {
+    grid-template-columns: 1fr;
+}
+
+h2 {
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+section {
+    padding-top: 150px; /* Adjusted to ensure content doesn't get hidden under the fixed header */
+}
+}
+@media (max-width: 1024px) {
+  .grid-container {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .job-card {
+      padding: 1rem;
+  }
+
+  .job-header {
+      flex-direction: column;
+      text-align: center;
+  }
 }
