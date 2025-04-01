@@ -956,13 +956,13 @@ li {
 
 @media screen and (max-width: 768px) {
     h1 { font-size: 1.5em; }
-    h2 { font-size: 1em; }
+    h2 { font-size: .8em; }
     .btn { width: 90%; font-size: 1.1em; }
 }
 
 @media screen and (max-width: 480px) {
     h1 { font-size: 1.3em; }
-    h2 { font-size: .8em; }
+    h2 { font-size: .7em; }
     li { font-size: 1em; }
     .btn { width: 100%; font-size: 1em; }
 }
