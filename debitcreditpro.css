@@ -1548,10 +1548,20 @@ hr.hr-gradient {
 
 @media (max-width: 767px) {
   .grid-container {
-      grid-template-columns: 1fr; /* 1 column for mobile screens */
+      display: grid;
+      grid-template-columns: 1fr !important; /* Force 1 column */
+      gap: 1rem; /* Adjust spacing for smaller screens */
+      width: 100%;
+      padding: 1rem;
+  }
+
+  .job-card {
+      width: 100%; /* Ensure full width */
+      max-width: 100%;
+      justify-self: center; /* Center job cards */
   }
 
   .grid-container > :last-child {
-      grid-column: auto; /* Reset alignment for single column layout */
+      grid-column: auto; /* Reset alignment */
   }
 }
