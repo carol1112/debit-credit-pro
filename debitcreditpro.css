@@ -1,4 +1,5 @@
 /* Header (Static Position) */
+/* Header Styling */
 header {
   position: fixed;
   top: 0;
@@ -13,19 +14,22 @@ header {
   z-index: 1000;
 }
 
+/* Header Container */
 .header-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 20px;
   position: relative;
 }
 
+/* Logo Styling */
 .logo img {
-  width: 180px;
+  width: 180px;   /* Adjust logo size */
   height: auto;
 }
 
+/* Menu Styling */
 .menu {
   list-style: none;
   display: flex;
@@ -48,11 +52,11 @@ header {
 }
 
 .menu li a:hover {
-  color:red;
+  color: red;
   border-radius: 5px;
 }
 
-/* Dropdown Styling */
+/* Dropdown Menu */
 .dropdown-menu {
   list-style: none;
   position: absolute;
@@ -77,68 +81,226 @@ header {
   color: black;
 }
 
-/* Responsive Design */
+/* Responsive Design - Mobile (up to 480px) */
+@media (max-width: 480px) {
+  .header-container {
+    flex-direction: column;
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .logo img {
+    width: 150px;  /* Adjust logo size for mobile */
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    background: #2088ef;
+    position: absolute;
+    top: 60px; /* Adjust to be below the header */
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .dropdown-menu {
+    position: static;
+    width: 100%;
+    background: #2088ef;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+/* Responsive Design - Tablet (up to 768px) */
+@media (max-width: 768px) {
+  .header-container {
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+
+  .logo img {
+    width: 160px;  /* Adjust logo size for tablet */
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    background: #2088ef;
+    position: absolute;
+    top: 60px; /* Adjust to be below the header */
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .dropdown-menu {
+    position: static;
+    width: 100%;
+    background: #2088ef;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+/* Responsive Design - Laptop (up to 1024px) */
 @media (max-width: 1024px) {
   .header-container {
-      justify-content: space-between;
-      padding: 0 20px;
+    justify-content: space-between;
+    padding: 15px 30px;
   }
+
+  .logo img {
+    width: 180px;  /* Adjust logo size for laptop */
+  }
+
   .menu {
-      display: none;
-      flex-direction: column;
-      background: blue;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      padding: 10px 0;
-      text-align: center;
+    display: none;
+    flex-direction: row;
+    gap: 20px;
   }
+
   .menu.active {
-      display: flex;
+    display: flex;
   }
-  .menu li {
-      width: 100%;
-  }
-  .dropdown-menu {
-      position: static;
-      display: none;
-      width: 100%;
-      background: #2088ef;
-  }
-  .dropdown:hover .dropdown-menu {
-      display: block;
-  }
+
   .hamburger {
-      display: block;
+    display: block;
+  }
+}
+
+/* Responsive Design - Desktop */
+@media (min-width: 1025px) {
+  .header-container {
+    justify-content: space-between;
+    padding: 15px 30px;
+  }
+
+  .logo img {
+    width: 180px;  /* Adjust logo size for desktop */
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .menu li {
+    position: relative;
+  }
+
+  .dropdown-menu {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: blue;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    display: none;
+    min-width: 180px;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: block;
   }
 }
 
 /* Video Section */
 #home {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh; /* Full screen height */
+  justify-content: center;  /* Centers the video horizontally */
+  align-items: center;      /* Centers the video vertically */
+  min-height: 100vh;         /* Full screen height */
   background: #060606;
   padding: 10px;
-  overflow: hidden; /* Prevent unwanted scrollbars */
+  overflow: hidden;          /* Prevent unwanted scrollbars */
+  margin-top: 60px;          /* Optional: Make space for a fixed header */
 }
 
 /* Video Styling */
 #bg-video {
-  width: 100%;
-  max-width: 800px; /* Limit width */
-  height: auto; /* Maintain aspect ratio */
-  object-fit: cover; /* Ensure video fills the container */
-  border-radius: 10px; /* Optional rounded corners */
+  width: 100%;               /* Full width */
+  max-width: 1200px;         /* Max width for large screens */
+  height: auto;              /* Maintain aspect ratio */
+  object-fit: cover;         /* Ensure video covers the area */
+  border-radius: 10px;       /* Optional rounded corners */
+  margin: 0 auto;            /* Center the video */
 }
 
-/* Responsive Fix for Smaller Screens */
-@media (max-width: 400px) {
+/* Responsive Fix for Smaller Screens (Mobile, Tablet, and Laptop) */
+
+/* Mobile (up to 480px) */
+@media (max-width: 480px) {
   #bg-video {
-      width: 90%; /* Scale down for mobile */
-      max-width: 100%;
+    width: 90%;               /* Scale down for mobile */
+    max-width: 100%;
+    height: auto;             /* Maintain aspect ratio */
+  }
+}
+
+/* Tablet (up to 768px) */
+@media (max-width: 768px) {
+  #bg-video {
+    width: 90%;               /* Scale down for tablet */
+    max-width: 100%;
+    height: auto;             /* Maintain aspect ratio */
+  }
+}
+
+/* Laptop (up to 1024px) */
+@media (max-width: 1024px) {
+  #bg-video {
+    width: 90%;               /* Scale down for laptop */
+    max-width: 100%;
+    height: auto;             /* Maintain aspect ratio */
+  }
+}
+
+/* Desktop (1025px and above) */
+@media (min-width: 1025px) {
+  #bg-video {
+    width: 100%;              /* Full width for desktop */
+    max-width: 1200px;        /* Limit width for large screens */
+    height: auto;             /* Maintain aspect ratio */
   }
 }
 
