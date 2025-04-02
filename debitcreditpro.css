@@ -247,60 +247,28 @@ header {
 /* Video Section */
 #home {
   display: flex;
-  justify-content: center;  /* Centers the video horizontally */
-  align-items: center;      /* Centers the video vertically */
-  min-height: 100vh;         /* Full screen height */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Full screen height */
   background: #060606;
   padding: 10px;
-  overflow: hidden;          /* Prevent unwanted scrollbars */
-  margin-top: 60px;          /* Optional: Make space for a fixed header */
+  overflow: hidden; /* Prevent unwanted scrollbars */
 }
 
 /* Video Styling */
 #bg-video {
-  width: 100%;               /* Full width */
-  max-width: 1200px;         /* Max width for large screens */
-  height: auto;              /* Maintain aspect ratio */
-  object-fit: cover;         /* Ensure video covers the area */
-  border-radius: 10px;       /* Optional rounded corners */
-  margin: 0 auto;            /* Center the video */
+  width: 100%;
+  max-width: 800px; /* Limit width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure video fills the container */
+  border-radius: 10px; /* Optional rounded corners */
 }
 
-/* Responsive Fix for Smaller Screens (Mobile, Tablet, and Laptop) */
-
-/* Mobile (up to 480px) */
-@media (max-width: 480px) {
+/* Responsive Fix for Smaller Screens */
+@media (max-width: 400px) {
   #bg-video {
-    width: 90%;               /* Scale down for mobile */
-    max-width: 100%;
-    height: auto;             /* Maintain aspect ratio */
-  }
-}
-
-/* Tablet (up to 768px) */
-@media (max-width: 768px) {
-  #bg-video {
-    width: 90%;               /* Scale down for tablet */
-    max-width: 100%;
-    height: auto;             /* Maintain aspect ratio */
-  }
-}
-
-/* Laptop (up to 1024px) */
-@media (max-width: 1024px) {
-  #bg-video {
-    width: 90%;               /* Scale down for laptop */
-    max-width: 100%;
-    height: auto;             /* Maintain aspect ratio */
-  }
-}
-
-/* Desktop (1025px and above) */
-@media (min-width: 1025px) {
-  #bg-video {
-    width: 100%;              /* Full width for desktop */
-    max-width: 1200px;        /* Limit width for large screens */
-    height: auto;             /* Maintain aspect ratio */
+      width: 90%; /* Scale down for mobile */
+      max-width: 100%;
   }
 }
 
