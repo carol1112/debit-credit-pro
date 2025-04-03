@@ -1336,7 +1336,7 @@ li {
   }
   .testimonial {
     width: 85%;
-    padding: 30px;
+    padding: 10px;
   }
   .prev, .next {
     padding: 10px 14px;
@@ -1356,7 +1356,12 @@ li {
   }
   .testimonial {
     width: 85%;
-    padding: 30px;
+    padding: 10px;
+  }
+  #testimonial h2 {
+    font-size: 2rem;
+    margin-bottom: 15px; /* Decrease the spacing */
+    padding: 5px 0; /* Reduce unnecessary top/bottom padding */
   }
   .prev, .next {
     padding: 10px 14px;
