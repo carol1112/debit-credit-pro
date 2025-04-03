@@ -920,7 +920,7 @@ body {
 
 /* Why Choose Us Section */
 .why-choose-us {
-  padding: 160px 20px 80px; /* Increased top padding to prevent overlap */
+  padding: 180px 20px 80px; /* Increased top padding to prevent overlap */
   text-align: center;
 }
 
@@ -1004,7 +1004,7 @@ body {
 /* Mobile Phones */
 @media (max-width: 480px) {
   .why-choose-us {
-    padding-top: 120px; /* Adjusted for mobile header height */
+    padding-top: 140px; /* Adjusted for mobile header height */
     padding-left: 15px;
     padding-right: 15px;
   }
@@ -1329,7 +1329,7 @@ li {
       padding: 0 30px;
   }
   .testimonial {
-      width: 85%;
+      width: 70%;
       padding: 25px;
   }
   .prev, .next {
