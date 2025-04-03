@@ -1,4 +1,11 @@
-/* Header (Static Position) */
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  box-sizing: border-box;
+  
+}
+
 /* Header Styling */
 header {
   position: fixed;
@@ -12,6 +19,7 @@ header {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   padding: 15px 20px;
   z-index: 1000;
+  height: 120px;
 }
 
 /* Header Container */
@@ -23,10 +31,35 @@ header {
   position: relative;
 }
 
-/* Logo Styling */
+/* Responsive Logo Sizes */
 .logo img {
-  width: 180px;   /* Adjust logo size */
+  width: 180px; /* Standard desktop size */
   height: auto;
+  max-height: 100px; /* Prevents it from exceeding the header */
+}
+
+/* Adjust for Laptops (up to 1024px) */
+@media (max-width: 1024px) {
+  .logo img {
+    width: 160px;
+    max-height: 90px;
+  }
+}
+
+/* Adjust for Tablets (up to 768px) */
+@media (max-width: 768px) {
+  .logo img {
+    width: 140px;
+    max-height: 80px;
+  }
+}
+
+/* Adjust for Mobile Phones (up to 480px) */
+@media (max-width: 480px) {
+  .logo img {
+    width: 120px;
+    max-height: 70px;
+  }
 }
 
 /* Menu Styling */
@@ -89,16 +122,12 @@ header {
     gap: 15px;
   }
 
-  .logo img {
-    width: 150px;  /* Adjust logo size for mobile */
-  }
-
   .menu {
     display: none;
     flex-direction: column;
     background: #2088ef;
     position: absolute;
-    top: 60px; /* Adjust to be below the header */
+    top: 60px;
     left: 0;
     width: 100%;
     padding: 10px 0;
@@ -136,16 +165,12 @@ header {
     padding: 10px 20px;
   }
 
-  .logo img {
-    width: 160px;  /* Adjust logo size for tablet */
-  }
-
   .menu {
     display: none;
     flex-direction: column;
     background: #2088ef;
     position: absolute;
-    top: 60px; /* Adjust to be below the header */
+    top: 60px;
     left: 0;
     width: 100%;
     padding: 10px 0;
@@ -154,11 +179,6 @@ header {
 
   .menu.active {
     display: flex;
-  }
-
-  .menu li {
-    width: 100%;
-    text-align: center;
   }
 
   .dropdown-menu {
@@ -183,10 +203,6 @@ header {
     padding: 15px 30px;
   }
 
-  .logo img {
-    width: 180px;  /* Adjust logo size for laptop */
-  }
-
   .menu {
     display: none;
     flex-direction: row;
@@ -209,10 +225,6 @@ header {
     padding: 15px 30px;
   }
 
-  .logo img {
-    width: 180px;  /* Adjust logo size for desktop */
-  }
-
   .menu {
     display: flex;
     flex-direction: row;
@@ -221,10 +233,6 @@ header {
 
   .hamburger {
     display: none;
-  }
-
-  .menu li {
-    position: relative;
   }
 
   .dropdown-menu {
@@ -245,74 +253,76 @@ header {
 }
 
 /* Video Section */
-#home {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh; /* Full screen height */
-  background: #060606;
-  padding: 10px;
-  overflow: hidden; /* Prevent unwanted scrollbars */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding-top: 120px; /* Matches header height */
+  margin: 0; /* Removes any default browser margins */
 }
 
+/* Video Section Styling */
 #home {
   display: flex;
-  justify-content: center;  /* Centers the video horizontally */
-  align-items: center;      /* Centers the video vertically */
-  min-height: 100vh;         /* Full screen height */
+  justify-content: center; /* Centers the video horizontally */
+  align-items: center;     /* Centers the video vertically */
+  min-height: calc(100vh - 120px); /* Adjust height to remove extra space */
   background: #060606;
-  padding: 10px;
-  overflow: hidden;          /* Prevent unwanted scrollbars */
-  margin-top: 60px;          /* Optional: Make space for a fixed header */
+  padding: 0; /* Remove extra padding */
+  overflow: hidden; /* Prevent unwanted scrollbars */
+  position: relative;
+  margin-top: 0; /* Ensures no space from header */
 }
 
 /* Video Styling */
 #bg-video {
-  width: 100%;               /* Full width */
-  max-width: 1200px;         /* Max width for large screens */
-  height: auto;              /* Maintain aspect ratio */
-  object-fit: cover;         /* Ensure video covers the area */
-  border-radius: 10px;       /* Optional rounded corners */
-  margin: 0 auto;            /* Center the video */
+  width: 80%;              /* Reduced width for laptops */
+  height: auto;            /* Maintain aspect ratio */
+  max-width: 900px;        /* Limit width on larger screens */
+  max-height: 500px;       /* Adjust height to prevent overflow */
+  object-fit: cover;       /* Ensure video fills the container */
+  border-radius: 10px;     /* Optional rounded corners */
+  margin: 0 auto;          /* Centers the video within the container */
+  position: relative;
 }
 
-/* Responsive Fix for Smaller Screens (Mobile, Tablet, and Laptop) */
-
-/* Mobile (up to 480px) */
-@media (max-width: 480px) {
+/* Responsive Adjustments */
+@media (max-width: 1440px) {  /* Larger laptops */
   #bg-video {
-    width: 90%;               /* Scale down for mobile */
-    max-width: 100%;
-    height: auto;             /* Maintain aspect ratio */
+      width: 75%;
+      max-height: 380px;
   }
 }
 
-/* Tablet (up to 768px) */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {  /* Standard laptops & tablets */
   #bg-video {
-    width: 90%;               /* Scale down for tablet */
-    max-width: 100%;
-    height: auto;             /* Maintain aspect ratio */
+      width: 70%;
+      max-height: 350px;
   }
 }
 
-/* Laptop (up to 1024px) */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {   /* Small tablets & larger smartphones */
   #bg-video {
-    width: 90%;               /* Scale down for laptop */
-    max-width: 100%;
-    height: auto;             /* Maintain aspect ratio */
+      width: 90%;
+      max-height: 350px;
   }
 }
 
-/* Desktop (1025px and above) */
-@media (min-width: 1025px) {
+@media (max-width: 480px) {   /* Mobile phones */
   #bg-video {
-    width: 100%;              /* Full width for desktop */
-    max-width: 1200px;        /* Limit width for large screens */
-    height: auto;             /* Maintain aspect ratio */
+      width: 95%;
+      max-height: 300px;
   }
 }
+
+@media (max-width: 400px) {   /* Very small screens */
+  #bg-video {
+      width: 100%;
+      max-height: 250px;
+  }
+}
+
+/*about us with highlighted */
 /*background image*/
 #about {
   text-align: center;
@@ -491,18 +501,16 @@ header {
 /*mission statement*/
 /* about us*/
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+  font-family: Arial, sans-serif; 
   background-color: #fff;
   box-sizing: border-box;
 }
 
 .about-section {
   background-color: #fff;
-  padding: 80px 40px;
-  margin-top: 120px;
   text-align: center;
+  padding: 80px 40px; /* Increase top padding to push content below the header */
+  
 }
 
 .about-section h2 {
@@ -554,8 +562,8 @@ body {
 
 #mission h2 {
   color: blue;
-  padding: 20px;
-  margin: 50px auto;
+  padding: 10px,10px;
+  margin: 40px auto;
   text-align: center;
   font-size: 40px;
 }
@@ -622,34 +630,34 @@ body {
 }
 
   /* Core Values Section */
-#corevalues {
-  background-color: #fff;
-  padding: 0; /* Remove extra padding */
-  margin: 0; /* Ensure no extra margin */
-  position: relative;
-  background-image: url(b5.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
- 
-}
-
-/* Remove extra space around container */
-.container2 {
-  max-width: 800px;
-  margin: 0 auto; /* Centers the content */
-  padding: 2rem;
- 
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  background-image: url(b6.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
- 
-}
+  #corevalues {
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    min-height: 100vh; /* Ensure section fills the viewport */
+    padding: 4rem 2rem;
+    position: relative;
+    z-index: 1;
+    background-image: url(b5.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  
+  /* Ensure container is centered */
+  #corevalues .container2 {
+    max-width: 90%;
+    padding: 2.5rem;
+    margin: 4rem 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-image: url(b6.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
 /* Adjust heading */
 #corevalues h2 {
   color: blue;
@@ -742,14 +750,15 @@ body {
   background-color: #fff;
   padding: 80px 20px;
   text-align: center;
+  
 }
 
 .services-section h2 {
-  font-size: 3em;
-  margin-bottom: 40px;
+  font-size: 3rem;
   color: blue;
   text-transform: uppercase;
   font-weight: bold;
+  padding-top: 50px;
 }
 
 .services-container {
@@ -784,7 +793,8 @@ body {
 
 .service-box h3 {
   font-size: 1.8em;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
+  margin-top: 40px;
   color: #f8f9fa;
 }
 
