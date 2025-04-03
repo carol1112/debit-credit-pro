@@ -4,7 +4,7 @@ body {
   background-color: #fff;
   box-sizing: border-box;
   margin: 0;
-  padding-top: 120px; /* Matches default header height */
+   /* Matches default header height */
 }
 
 /* Header Styling */
@@ -18,7 +18,7 @@ header {
   background-repeat: no-repeat;
   background-attachment: fixed;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  padding: 15px 20px;
+  padding: 0px 20px;
   z-index: 1000;
   height: 120px; /* Default for desktop */
   display: flex;
@@ -270,13 +270,13 @@ header {
   }
 }
 
-/* Video Section */
+/* General body styling */
 body {
   font-family: Arial, sans-serif;
   background-color: #fff;
   box-sizing: border-box;
-  padding-top: 120px; /* Matches header height */
   margin: 0; /* Removes any default browser margins */
+  padding: 0; /* Ensures no padding affecting the layout */
 }
 
 /* Video Section Styling */
@@ -284,12 +284,11 @@ body {
   display: flex;
   justify-content: center; /* Centers the video horizontally */
   align-items: center;     /* Centers the video vertically */
-  min-height: calc(100vh - 120px); /* Adjust height to remove extra space */
+  min-height: 100vh;       /* Full screen height */
   background: #060606;
-  padding: 0; /* Remove extra padding */
-  overflow: hidden; /* Prevent unwanted scrollbars */
+  padding: 0px;
+  overflow: hidden;        /* Prevent unwanted scrollbars */
   position: relative;
-  margin-top: 0; /* Ensures no space from header */
 }
 
 /* Video Styling */
@@ -314,7 +313,7 @@ body {
 
 @media (max-width: 1024px) {  /* Standard laptops & tablets */
   #bg-video {
-      width: 70%;
+      width: 70%;  /* Reduce width */
       max-height: 350px;
   }
 }
@@ -339,15 +338,18 @@ body {
       max-height: 250px;
   }
 }
+   
 
 /*about us with highlighted */
 /*background image*/
+/* Adjust the about section to prevent it from being hidden under the fixed header */
 #about {
   text-align: center;
   background-image: url(b6.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  padding-top: 130px; /* Adds padding to account for the fixed header */
 }
 
 /* CSS Styles about-sections with highlight */
@@ -390,7 +392,6 @@ body {
   font-size: 1.8rem;
   margin: 25px 0 15px;
   font-weight: 500;
-  
 }
 
 .about-contents p {
@@ -410,29 +411,30 @@ body {
   border-radius: 4px;
 }
 
-.highlight-block p{ text-align: justify; /* Justifies the text */
-  text-indent: 2em; /* Adds an indentation of 2em (adjust as needed) */}
-
+.highlight-block p {
+  text-align: justify; /* Justifies the text */
+  text-indent: 2em; /* Adds an indentation of 2em (adjust as needed) */
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .about-sections {
-      flex-direction: column;
-      padding: 20px;
-      margin: 40px auto;
+    flex-direction: column;
+    padding: 20px;
+    margin: 40px auto;
   }
 
   .about-image {
-      flex: none;
-      max-width: 100%;
+    flex: none;
+    max-width: 100%;
   }
 
   .about-contents h1 {
-      font-size: 2.2rem;
+    font-size: 2.2rem;
   }
 
   .about-contents h2 {
-      font-size: 1.5rem;
+    font-size: 1.5rem;
   }
 }
 /* Commitment Section */
@@ -441,9 +443,10 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  padding: 4rem 2rem;
+  padding: 2rem 1rem;
   position: relative;
   z-index: 1;
+  padding-top: 130px;
 }
 
 #commitment h2 {
@@ -478,7 +481,7 @@ body {
 @media (max-width: 1024px) {
   #commitment {
       padding: 3.5rem 1.5rem;
-      padding-top: 180px;
+      padding-top: 180px;  /* Adjusted padding-top to prevent overlap */
   }
   #commitment h2 {
       font-size: 2rem;
@@ -494,7 +497,7 @@ body {
 @media (max-width: 768px) {
   #commitment {
       padding: 3rem 1rem;
-      padding-top: 160px;
+      padding-top: 160px;  /* Adjusted padding-top for tablets */
   }
   #commitment h2 {
       font-size: 1.8rem;
@@ -507,7 +510,7 @@ body {
 @media (max-width: 480px) {
   #commitment {
       padding: 2.5rem 1rem;
-      padding-top: 140px;
+      padding-top: 140px;  /* Adjusted padding-top for mobile */
   }
   #commitment h2 {
       font-size: 1.5rem;
@@ -653,7 +656,7 @@ body {
     align-items: center; /* Center vertically */
     justify-content: center; /* Center horizontally */
     min-height: 100vh; /* Ensure section fills the viewport */
-    padding: 4rem 2rem;
+    padding: 4rem 4rem;
     position: relative;
     z-index: 1;
     background-image: url(b5.png);
@@ -667,7 +670,7 @@ body {
   #corevalues .container2 {
     max-width: 90%;
     padding: 2.5rem;
-    margin: 4rem 0;
+    margin: 5rem 0;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     background-image: url(b6.png);
@@ -883,11 +886,12 @@ body {
 /*why choose us section*/
 
 .why-choose-us {
-  padding: 100px 20px;
+  padding: 140px 20px 100px;  /* Add more top padding to account for the fixed header */
   background-image: url(b4.png);
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
+  margin-top: 0px; /* Creates additional space if needed */
 }
 
 .container {
@@ -942,36 +946,36 @@ body {
 /* Responsive Design */
 @media (max-width: 1024px) {
   .why-choose-us {
-      padding: 80px 20px;
+    padding: 100px 20px;
   }
   .why-choose-us h2 {
-      font-size: 2.2rem;
+    font-size: 2.2rem;
   }
 }
 
 @media (max-width: 768px) {
   .reasons-grid {
-      grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
   .why-choose-us h2 {
-      font-size: 2rem;
+    font-size: 2rem;
   }
 }
 
 @media (max-width: 480px) {
   .why-choose-us {
-      padding: 60px 15px;
+    padding: 80px 15px;
   }
   .why-choose-us h2 {
-      font-size: 1.8rem;
+    font-size: 1.8rem;
   }
   .reason {
-      padding: 15px;
+    padding: 15px;
   }
 }
 
     
-/*FAQS*/
+/* General Body Styling */
 body {
   font-family: Arial, sans-serif;
   background-color: #fff;
@@ -980,12 +984,13 @@ body {
   box-sizing: border-box;
 }
 
+/* FAQ Section Styling */
 .faq-section {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding: 20px;
+  padding: 140px 20px 100px;  /* Added padding-top to avoid header overlap */
   background-color: #f8f9fa;
 }
 
@@ -1171,9 +1176,10 @@ li {
 #testimonial {
   background: #85baf3;
   color: white;
-  padding: 60px 20px;
+  padding: 180px 20px;
   text-align: center;
   overflow: hidden;
+  height: 100vh;
 }
 
 #testimonial h2 {
@@ -1310,7 +1316,7 @@ li {
   align-items: center;
   min-height: 100vh; /* Full viewport height */
   background-color: #fff; /* Optional: Add a background color */
-  padding: 100px 20px;
+  padding: 150px 20px;
 }
 hr{margin-top: 200px;}
 
@@ -1575,8 +1581,8 @@ button[type="submit"]:hover {
   footer p{text-align: center;}
   
 
-  /* General Styles  why choose us*/
-  hr{margin-top: 200px;}
+
+
 
 /*accounting jobs*/
 * {
@@ -1602,7 +1608,7 @@ header {
 
 /* Add padding to the first section to avoid overlap with the fixed header */
 section {
-  padding-top: 240px;
+  padding-top: 150px;
   padding-bottom: 40px;
 }
 
