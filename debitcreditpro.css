@@ -98,8 +98,8 @@ header {
 /* Mobile - Fix Header and Center Logo & Hamburger */
 @media (max-width: 480px) { /* Mobile Phones */
   header {
-    height: 80px; /* Adjusted for smaller screens */
-    padding: 0 15px; /* Padding to fit better */
+    height: 150px; /* Adjusted for smaller screens */
+    padding: 0 10px; /* Padding to fit better */
   }
   
   body {
@@ -641,34 +641,37 @@ body {
 }
 
   /* Core Values Section */
-  #corevalues {
-    display: flex;
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
-    min-height: 100vh; /* Ensure section fills the viewport */
-    padding: 4rem 4rem;
-    position: relative;
-    z-index: 1;
-    background-image: url(b5.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-  }
-  
-  /* Ensure container is centered */
-  #corevalues .container2 {
-    max-width: 90%;
-    padding: 2.5rem;
-    margin: 5rem 0;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    background-image: url(b6.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-  }
+#corevalues {
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  min-height: 100vh; /* Ensure section fills the viewport */
+  padding: 4rem;
+  position: relative;
+  z-index: 1;
+  background-image: url(b5.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  text-align: center; /* Center text */
+}
+
+/* Ensure container is centered */
+#corevalues .container2 {
+  max-width: 90%;
+  padding: 2.5rem;
+  margin: 5rem 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-image: url(b6.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  text-align: center; /* Center text inside the container */
+}
+
 /* Adjust heading */
 #corevalues h2 {
   color: blue;
@@ -684,6 +687,7 @@ body {
   color: #333;
   line-height: 1.6;
   margin-bottom: 1rem; /* Reduce bottom margin */
+  font-size: 1rem;
 }
 
 /* Remove spacing between sections */
@@ -699,6 +703,7 @@ section + #corevalues {
 @media (max-width: 768px) {
   #corevalues {
       background-attachment: scroll;
+      padding: 3rem; /* Reduce padding on tablets */
   }
   
   .container2 {
@@ -711,43 +716,45 @@ section + #corevalues {
   }
   
   #corevalues p {
-      font-size: 0.95rem;
+      font-size: 1rem; /* Adjust font size for better readability */
   }
 }
 
 /* Mobile Phones */
 @media (max-width: 480px) {
+  #corevalues {
+    padding: 2rem; /* Adjust padding for mobile */
+  }
+
   .container2 {
-      padding: 1rem;
+    padding: 1rem; /* Reduce padding for mobile */
   }
   
   #corevalues h2 {
-      font-size: 1.5rem;
+      font-size: 1.6rem; /* Smaller font size for headings on mobile */
   }
   
   #corevalues p {
-      font-size: 0.9rem;
+      font-size: 0.9rem; /* Smaller font size for paragraphs */
       line-height: 1.5;
-  
   }
 }
 
 /* Large Screens */
 @media (min-width: 1200px) {
   .container2 {
-      max-width: 1000px;
-      padding: 2rem;
+    max-width: 1000px;
+    padding: 2rem;
   }
   
   #corevalues h2 {
-      font-size: 2.5rem;
+    font-size: 2.5rem; /* Larger font size on large screens */
   }
   
   #corevalues p {
-      font-size: 1.1rem;
+    font-size: 1.1rem;
   }
 }
-
 /*services section*/
 body {
   font-family: 'Poppins', sans-serif;
