@@ -1330,11 +1330,11 @@ li {
   }
 
   #testimonial {
-    padding: 120px 30px 60px; /* Adjusted for better visibility */
+    padding: 100px 30px 60px; /* Adjusted for better visibility */
 }
 .testimonial {
   width: 85%;
-  padding: 30px;
+  padding: 10px;
 }
 .prev, .next {
   padding: 10px 14px;
