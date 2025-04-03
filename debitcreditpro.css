@@ -755,7 +755,7 @@ section + #corevalues {
     font-size: 1.1rem;
   }
 }
-/*services section*/
+/* General Styles */
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
@@ -764,21 +764,23 @@ body {
   box-sizing: border-box;
 }
 
+/* Services Section */
 .services-section {
   background-color: #fff;
-  padding: 80px 20px;
+  padding: 120px 20px 80px; /* Increased top padding to prevent overlap */
   text-align: center;
-  
 }
 
+/* Heading */
 .services-section h2 {
   font-size: 3rem;
   color: blue;
   text-transform: uppercase;
   font-weight: bold;
-  padding-top: 50px;
+  padding-top: 20px;
 }
 
+/* Services Grid */
 .services-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -821,6 +823,7 @@ body {
   line-height: 1.6;
 }
 
+/* Buttons */
 .btn {
   width: 200px;
   padding: 10px;
@@ -842,44 +845,62 @@ body {
 }
 
 /* Responsive Design */
+
+/* Fix for Laptop & Tablet Screens */
 @media (max-width: 1024px) {
+  .services-section {
+    padding-top: 140px; /* Adjusted for laptops with larger fixed headers */
+  }
+
   .services-container {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
+
   .service-box {
     padding: 25px;
   }
 }
 
+/* Tablets */
 @media (max-width: 768px) {
+  .services-section {
+    padding-top: 120px; /* Adjusted for tablets */
+  }
+
   .services-container {
     grid-template-columns: repeat(1, 1fr);
   }
+
   .services-section h2 {
     font-size: 2.5em;
   }
 }
 
+/* Mobile Phones */
 @media (max-width: 480px) {
   .services-section {
-    padding: 50px 15px;
+    padding-top: 110px; /* Adjusted for mobile header height */
+    padding-left: 15px;
+    padding-right: 15px;
   }
+
   .services-section h2 {
     font-size: 2em;
   }
+
   .service-box {
     padding: 20px;
   }
+
   .service-box p {
     text-align: center;
-
   }
+
   .btn {
     width: 100%;
   }
 }
-
 /*why choose us section*/
 
 .why-choose-us {
@@ -897,18 +918,27 @@ body {
   padding: 0 20px;
 }
 
+/* Why Choose Us Section */
+.why-choose-us {
+  padding: 160px 20px 80px; /* Increased top padding to prevent overlap */
+  text-align: center;
+}
+
+/* Heading */
 .why-choose-us h2 {
   font-size: 2.5rem;
   color: blue;
   margin-bottom: 40px;
 }
 
+/* Responsive Grid */
 .reasons-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
 }
 
+/* Individual Reason Box */
 .reason {
   background: #fff;
   padding: 20px;
@@ -922,18 +952,21 @@ body {
   transform: translateY(-10px);
 }
 
+/* Icon Styling */
 .reason .icon {
   font-size: 2rem;
   margin-bottom: 15px;
   display: block;
 }
 
+/* Reason Titles */
 .reason h3 {
   font-size: 1.5rem;
   color: #222;
   margin-bottom: 10px;
 }
 
+/* Reason Text */
 .reason p {
   font-size: 1rem;
   color: #555;
@@ -941,37 +974,50 @@ body {
 }
 
 /* Responsive Design */
+
+/* Fix for Laptop & Tablet Screens */
 @media (max-width: 1024px) {
   .why-choose-us {
-    padding: 100px 20px;
+    padding-top: 150px; /* Adjusted for larger fixed headers */
   }
+
   .why-choose-us h2 {
     font-size: 2.2rem;
   }
 }
 
+/* Tablets */
 @media (max-width: 768px) {
+  .why-choose-us {
+    padding-top: 130px; /* Adjusted for tablets */
+  }
+
   .reasons-grid {
     grid-template-columns: 1fr;
   }
+
   .why-choose-us h2 {
     font-size: 2rem;
   }
 }
 
+/* Mobile Phones */
 @media (max-width: 480px) {
   .why-choose-us {
-    padding: 80px 15px;
+    padding-top: 120px; /* Adjusted for mobile header height */
+    padding-left: 15px;
+    padding-right: 15px;
   }
+
   .why-choose-us h2 {
     font-size: 1.8rem;
   }
+
   .reason {
     padding: 15px;
   }
 }
 
-    
 /* General Body Styling */
 body {
   font-family: Arial, sans-serif;
@@ -987,55 +1033,62 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding: 140px 20px 100px;  /* Added padding-top to avoid header overlap */
+  padding: 160px 20px 100px;  /* Increased padding-top to prevent header overlap */
   background-color: #f8f9fa;
 }
 
+/* Container */
 .container {
   max-width: 700px;
   width: 100%;
   background: #fff;
-  padding: 20px;
+  padding: 25px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Heading */
 .container h2 {
   color: blue;
   text-align: center;
   font-size: 2rem;
+  margin-bottom: 20px;
 }
 
+/* FAQ Item */
 .faq {
   border-bottom: 1px solid #ddd;
-  padding: 10px 0;
+  padding: 15px 0;
 }
 
 .question {
   font-weight: bold;
   cursor: pointer;
-  color: white;
+  color: #0056b3;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: 1.1rem;
 }
 
 .question:hover {
-  color: #0056b3;
+  color: #004494;
 }
 
+/* Answer Section */
 .answer {
   display: none;
   padding-top: 5px;
   color: #0056b3;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease-in-out;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s;
 }
 
 .faq.active .answer {
   display: block;
-  max-height: 200px;
+  max-height: 300px;
+  opacity: 1;
 }
 
 .toggle-icon {
@@ -1047,25 +1100,43 @@ body {
 }
 
 /* Responsive Design */
+
+/* Laptop & Tablets */
 @media (max-width: 1024px) {
+  .faq-section {
+    padding-top: 180px; /* Increased to prevent header overlap */
+  }
   .container {
-    max-width: 90%;
+    max-width: 85%;
   }
 }
 
+/* Tablets */
 @media (max-width: 768px) {
+  .faq-section {
+    padding-top: 140px; /* Adjusted for tablet header */
+  }
   .container {
     max-width: 95%;
-    padding: 15px;
+    padding: 20px;
   }
   .container h2 {
     font-size: 1.8rem;
   }
+  .question {
+    font-size: 1rem;
+  }
 }
 
+/* Mobile Phones */
 @media (max-width: 480px) {
+  .faq-section {
+    padding-top: 120px; /* Adjusted for mobile header */
+    padding-left: 15px;
+    padding-right: 15px;
+  }
   .container {
-    padding: 10px;
+    padding: 15px;
   }
   .container h2 {
     font-size: 1.6rem;
@@ -1077,7 +1148,6 @@ body {
     font-size: 0.9rem;
   }
 }
-
   /*read more btn job lists*/
    /* General styles */
    body {
