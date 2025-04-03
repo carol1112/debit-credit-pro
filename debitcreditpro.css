@@ -1243,146 +1243,172 @@ li {
 #testimonial {
   background: #85baf3;
   color: white;
-  padding: 180px 20px;
+  padding: 160px 40px 80px; /* Increased top padding for visibility */
   text-align: center;
   overflow: hidden;
-  height: 100vh;
+  min-height: auto; /* Allows dynamic height adjustment */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-#testimonial h2 {
-  margin-bottom: 30px;
-  font-size: 2.2em;
-}
-
+/* Testimonial Container */
 .testimonial-container {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   position: relative;
   padding: 0 40px;
 }
 
+/* Testimonial Wrapper */
 .testimonial-wrapper {
   position: relative;
-  min-height: 300px;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+/* Testimonial Content */
 .testimonial {
-  position: absolute;
+  position: relative; /* Changed from absolute */
   width: 80%;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
   background: white;
   color: #333;
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  padding: 30px;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+  padding: 35px;
   text-align: center;
+  display: none; /* Hide all testimonials */
 }
 
-.testimonial.active {
-  opacity: 1;
-  z-index: 2;
-}
-
+/* Text Adjustments */
 .testimonial p {
-  font-size: 1.1em;
+  font-size: 1.2em;
   line-height: 1.6;
   margin-bottom: 15px;
 }
 
 .testimonial h4 {
   color: blue;
-  font-size: 1em;
+  font-size: 1.1em;
   font-weight: 600;
 }
 
+.testimonial.active {
+  display: block; /* Show only the active testimonial */
+}
+/* Navigation Buttons */
 .prev, .next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255,255,255,0.9);
+  background: rgba(255, 255, 255, 0.9);
   color: #007bff;
   border: none;
-  padding: 10px 15px;
+  padding: 12px 16px;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 22px;
   border-radius: 50%;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   transition: all 0.3s ease;
   z-index: 3;
 }
 
-.prev { left: 10px; }
-.next { right: 10px; }
+.prev { left: -40px; }
+.next { right: -40px; }
 
 .prev:hover, .next:hover {
   background: #007bff;
   color: white;
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-  .testimonial-container {
-      padding: 0 10px;
-  }
+/* Responsive Adjustments */
 
+/* Larger Laptops (1336px) */
+@media (max-width: 1336px) {
+  #testimonial {
+    padding: 120px 30px 60px;
+  }
+  .testimonial-container {
+    padding: 0 20px;
+  }
+  .testimonial {
+    width: 85%;
+    padding: 30px;
+  }
+  .prev, .next {
+    padding: 10px 14px;
+    font-size: 18px;
+  }
+  .prev { left: 10px; }
+  .next { right: 10px; }
+}
+
+/* Laptops (1024px) */
+@media (max-width: 1024px) {
   #testimonial {
     padding: 100px 30px 60px; /* Adjusted for better visibility */
-}
-.testimonial {
-  width: 85%;
-  padding: 10px;
-}
-.prev, .next {
-  padding: 10px 14px;
-  font-size: 18px;
-}
-.prev { left: 10px; }
-.next { right: 10px; }
-}
-
-  
-
-@media (max-width: 768px) {
+  }
   .testimonial-container {
-      padding: 0 20px;
+    padding: 0 20px;
   }
   .testimonial {
-      width: 90%;
-      padding: 20px;
+    width: 85%;
+    padding: 30px;
   }
   .prev, .next {
-      padding: 8px 12px;
-      font-size: 18px;
+    padding: 10px 14px;
+    font-size: 18px;
+  }
+  .prev { left: 10px; }
+  .next { right: 10px; }
+}
+
+/* Tablets (768px) */
+@media (max-width: 768px) {
+  #testimonial {
+    padding: 120px 20px 80px;
+  }
+  .testimonial-container {
+    padding: 0 15px;
+  }
+  .testimonial {
+    width: 90%;
+    padding: 20px;
+  }
+  .prev, .next {
+    padding: 9px 12px;
+    font-size: 18px;
   }
 }
 
+/* Mobile Phones (480px) */
 @media (max-width: 480px) {
   #testimonial {
-      padding: 40px 15px;
+    padding: 100px 15px 80px;
   }
   .testimonial-container {
-      padding: 0 10px;
+    padding: 0 10px;
   }
   .testimonial {
-      width: 95%;
-      padding: 15px;
+    width: 100%;
+    padding: 18px;
   }
   .testimonial p {
-      font-size: 1em;
+    font-size: 1em;
   }
   .testimonial h4 {
-      font-size: 0.9em;
+    font-size: 0.9em;
   }
   .prev, .next {
-      padding: 7px 10px;
-      font-size: 16px;
+    padding: 8px 10px;
+    font-size: 16px;
   }
+  .prev { left: 5px; }
+  .next { right: 5px; }
 }
-
 /* Center the Form Container */
 
 #sheetform {
