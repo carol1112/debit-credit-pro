@@ -1366,7 +1366,7 @@ li {
 
   #testimonial h2 {
     font-size: 2rem;
-    margin-bottom: 20px; /* Decrease the space below the heading */
+    margin-bottom: 5px; /* Decrease the space below the heading */
     padding: 5px 0; /* Reduce unnecessary top/bottom padding */
   }}
 
