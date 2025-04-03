@@ -37,9 +37,9 @@ header {
 
 /* Responsive Logo Sizes */
 .logo img {
-  width: 300px; /* Standard desktop size */
+  width: 400px; /* Standard desktop size */
   height: 150px;
-  max-height: 100px; /* Ensures it fits inside header */
+  max-height: 150px; /* Ensures it fits inside header */
   object-fit: contain; /* Maintain aspect ratio */
 }
 
@@ -95,7 +95,7 @@ header {
   color: black;
 }
 
-/* Mobile - Fix Header */
+/* Mobile - Fix Header and Center Logo & Hamburger */
 @media (max-width: 480px) { /* Mobile Phones */
   header {
     height: 80px; /* Adjusted for smaller screens */
@@ -106,14 +106,17 @@ header {
     padding-top: 80px;
   }
 
+  /* Center the header container */
+  .header-container {
+    flex-direction: row;
+    justify-content: center; /* Center horizontally */
+    align-items: center;
+    width: 100%;
+  }
+
   .logo img {
     width: 120px;
     max-height: 70px;
-  }
-
-  .header-container {
-    flex-direction: row;
-    justify-content: space-between;
   }
 
   .menu {
@@ -168,7 +171,7 @@ header {
   }
 
   .header-container {
-    justify-content: space-between;
+    justify-content: center; /* Centered layout for tablets */
     padding: 10px 20px;
   }
 
