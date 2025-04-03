@@ -9,50 +9,44 @@
 </head>
 <body>
      <!-- Fixed Header Navigation -->
-
-    
      <header>
-        <div class="header-container">
-            <div class="logo">
-                <img src="Debitlogo.jpg" alt="Debit Credit Logo">
-            </div>
-            <div class="hamburger">☰</div>
-            <nav>
-                <ul class="menu">
-                    <li><a href="debit credit pro.html">Home</a></li>
-                    <li class="dropdown">
-                        <a href="debitcredit about.html">About ▾</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="debitcredit commitment.html">Our Commitment</a></li>
-                            <li><a href="debitcredit mission.html">Mission</a></li>
-                            <li><a href="debitcredit testimonial.html">Testimonials</a></li>
-                            <li><a href="debitcredit corevalues.html">Core Values</a></li>
-                            <li><a href="debitcredit faq.html">FAQs</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="debitcredit service.html">Services ▾</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="accountingjob.html">Remote Jobs</a></li>
-                            <li><a href="debit credit why choose us.html">Why Choose Us</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="debitcredit contact.html">Contact</a></li>
-                </ul>
-            </nav>
+        <div class="logo">
+            <img src="Debitlogo.jpg" alt="Man Power Force Logo">
         </div>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <nav>
+            <ul class="menu" id="menu">
+                <li><a href="debit credit pro.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="debitcredit about.html">About ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="debitcredit mission.html">Our Mission</a></li>
+                        <li><a href="debitcredit commitment.html">Our Commitment</a></li>
+                        <li><a href="debitcredit corevalues.html">Core Values</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="debitcredit service.html">Services▾</a>
+                    <ul class="dropdown-menu">
+                     <li><a href="accountingjob.html">Remote Jobs</a></li>
+                    </ul>
+                </li>  
+                <li><a href="debitcredit faq.html">FAQS</a></li>
+                <li><a href="debit credit why choose us.html">Why Choose Us </a></li>
+                <li><a href="debitcredit testimonial.html">Testimonials</a></li>
+                <li><a href="debitcredit contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
     
+    
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const hamburger = document.querySelector(".hamburger");
-            const menu = document.querySelector(".menu");
-            
-            hamburger.addEventListener("click", function() {
-                menu.classList.toggle("active");
-            });
-        });
+        function toggleMenu() {
+            document.getElementById('menu').classList.toggle('active');
+        }
     </script>
+    
+    
     
   
 

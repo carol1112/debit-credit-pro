@@ -1,55 +1,47 @@
-/* General Styles */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #fff;
-  box-sizing: border-box;
+/* Reset and Base Styles */
+* {
   margin: 0;
-  /* Matches default header height */
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
 }
 
-/* Header Styling */
+body {
+  background-color: #f4f4f4;
+  
+}
+
+/* Header */
 header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-image: url(b3.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  padding: 0px 20px;
-  z-index: 1000;
-  height: 150px; /* Default for desktop */
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* Align logo and menu */
-}
-
-/* Header Container */
-.header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+ background-image: url(b3.png);
+ background-repeat: no-repeat;
+ background-size: cover;
+  padding: 8px 15px; /* Reduced padding */
   width: 100%;
-  padding: 0 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  height: 150px; /* Decreased height */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive Logo Sizes */
+/* Logo */
 .logo img {
-  width: 400px; /* Standard desktop size */
+  width: 200px;  /* Smaller logo */
   height: 150px;
-  max-height: 150px; /* Ensures it fits inside header */
-  object-fit: contain; /* Maintain aspect ratio */
 }
 
-/* Menu Styling */
+/* Menu */
 .menu {
   list-style: none;
   display: flex;
-  gap: 20px;
-  padding: 0;
-  margin: 0;
+  justify-content: center;
+  align-items: center;
+  gap: 15px; /* Adjusted gap */
 }
 
 .menu li {
@@ -57,207 +49,145 @@ header {
 }
 
 .menu li a {
-  text-decoration: none;
-  color: black;
-  font-size: 18px;
-  padding: 5px 10px;
+  text-decoration:none; 
+  color:black;
+  font-size: 18px; /* Slightly smaller text */
+  padding: 6px 10px; /* Adjusted padding */
   transition: 0.3s;
-  display: inline-block;
 }
 
-.menu li a:hover {
-  color: red;
-  border-radius: 5px;
-}
-
-/* Dropdown Menu */
+/* Dropdown */
 .dropdown-menu {
   list-style: none;
-  position: absolute;
   top: 100%;
   left: 0;
-  background: blue;
+  background:blue;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   display: none;
-  min-width: 180px;
+  min-width: 150px; /* Adjusted width */
+  position: absolute;
+  text-align: center;
+  padding: 10px 15px;
+  gap: 15px;
 }
 
 .dropdown:hover .dropdown-menu {
   display: block;
 }
 
-/* Hamburger Menu */
-.hamburger {
+.menu li a:hover, .dropdown-menu li a:hover {
+  color: red;
+  border-radius: 5px;
+  text-decoration:underline; 
+}
+
+/* Toggle Menu */
+.menu-toggle {
   display: none;
-  font-size: 28px;
+  font-size: 24px;
+  color:black;
   cursor: pointer;
-  color: black;
 }
 
-/* Mobile - Fix Header and Center Logo & Hamburger */
-@media (max-width: 480px) { /* Mobile Phones */
-  header {
-    height: 150px; /* Adjusted for smaller screens */
-    padding: 0 10px; /* Padding to fit better */
-  }
-  
-  body {
-    padding-top: 80px;
-  }
-
-  /* Center the header container */
-  .header-container {
-    flex-direction: row;
-    justify-content: center; /* Center horizontally */
-    align-items: center;
-    width: 100%;
-  }
-
-  .logo img {
-    width: 120px;
-    max-height: 70px;
-  }
-
-  .menu {
-    display: none;
-    flex-direction: column;
-    background: #2088ef;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    padding: 10px 0;
-    text-align: center;
-  }
-
-  .menu.active {
-    display: flex;
-  }
-
-  .menu li {
-    width: 100%;
-    text-align: center;
-  }
-
-  .dropdown-menu {
-    position: static;
-    width: 100%;
-    background: #2088ef;
-  }
-
-  .dropdown:hover .dropdown-menu {
-    display: block;
-  }
-
-  .hamburger {
-    display: block;
-  }
-}
-
-/* Tablet - Fix Header */
-@media (max-width: 768px) { /* Tablets */
-  header {
-    height: 90px; /* Slightly reduced height for tablets */
-  }
-  
-  body {
-    padding-top: 90px;
-  }
-
-  .logo img {
-    width: 140px;
-    max-height: 80px;
-  }
-
-  .header-container {
-    justify-content: center; /* Centered layout for tablets */
-    padding: 10px 20px;
-  }
-
-  .menu {
-    display: none;
-    flex-direction: column;
-    background: #2088ef;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    padding: 10px 0;
-    text-align: center;
-  }
-
-  .menu.active {
-    display: flex;
-  }
-
-  .hamburger {
-    display: block;
-  }
-}
-
-/* Laptop (1024px) - Menu displayed, no hamburger */
+/* Responsive Design */
 @media (max-width: 1024px) { /* Laptops */
   header {
-    height: 100px; /* Default height for laptops */
-  }
-  
-  body {
-    padding-top: 100px;
+      height: 70px; /* Reduced header height more */
+      padding: 6px 12px;
   }
 
   .logo img {
-    width: 160px;
-    max-height: 90px;
+      width: 75px; /* Further reduced logo size */
+      height:60px;
   }
 
-  .header-container {
-    justify-content: space-between;
-    padding: 15px 30px;
-  }
-
-  .menu {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-  }
-
-  .hamburger {
-    display: none; /* No hamburger on laptop devices */
+  .menu li a {
+      font-size: 13px; /* Adjusted font size */
+      padding: 5px 8px;
   }
 }
 
-/* Desktop (min-width: 1025px) */
-@media (min-width: 1025px) { /* Desktop */
-  .header-container {
-    justify-content: space-between;
-    padding: 15px 30px;
+@media (max-width: 768px) { /* Tablets and small screens */
+  header {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      height: 55px; /* Smaller header for tablets */
+      padding: 6px 10px;
+  }
+
+  .logo img {
+      width: 70px; /* Smaller logo */
+  }
+
+  .menu-toggle {
+      display: block;
   }
 
   .menu {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background:blue;
+      text-align: center;
+      padding: 10px 0;
   }
 
-  .hamburger {
-    display: none;
+  .menu.active {
+      display: flex;
   }
 
+  /* Dropdown for Mobile */
   .dropdown-menu {
-    list-style: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: blue;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    display: none;
-    min-width: 180px;
+      position: static;
+      width: 100%;
+  }
+
+  .dropdown-menu li a {
+      padding: 10px;
+      background-color:blue;
+      color: white;
   }
 
   .dropdown:hover .dropdown-menu {
-    display: block;
+      display: block;
+  }
+}
+
+/* Mobile Screens */
+@media (max-width: 480px) {
+  header {
+      height: 100px; /* Reduced header for mobile */
+  }
+
+  .logo img {
+      width: 150px; /* Smaller logo */
+      height:80px;
+  }
+}
+
+/* Tablet and larger screens */
+@media (min-width: 769px) {
+  .menu {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+  }
+
+  .menu-toggle {
+      display: none;
+  }
+
+  .dropdown-menu {
+      display: none;
+  }
+
+  .dropdown:hover .dropdown-menu {
+      display: block;
   }
 }
 /* General body styling */
