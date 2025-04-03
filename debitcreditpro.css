@@ -303,8 +303,8 @@ body {
 
 @media (max-width: 1024px) {  /* Standard laptops & tablets */
   #bg-video {
-      width: 70%;  /* Reduce width */
-      max-height: 350px;
+      width: 65%;  /* Reduce width */
+      max-height: 300px;
   }
 }
 
@@ -1326,15 +1326,15 @@ li {
 /* Responsive Design */
 @media (max-width: 1024px) {
   .testimonial-container {
-      padding: 0 30px;
+      padding: 0 10px;
   }
   .testimonial {
-      width: 70%;
-      padding: 25px;
+      width: 60%;
+      padding: 10px;
   }
   .prev, .next {
       padding: 9px 13px;
-      font-size: 19px;
+      font-size: 15px;
   }
 }
 
