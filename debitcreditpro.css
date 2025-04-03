@@ -20,7 +20,7 @@ header {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   padding: 0px 20px;
   z-index: 1000;
-  height: 120px; /* Default for desktop */
+  height: 150px; /* Default for desktop */
   display: flex;
   align-items: center;
   justify-content: space-between; /* Align logo and menu */
@@ -32,13 +32,15 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  padding: 0 20px;
 }
 
 /* Responsive Logo Sizes */
 .logo img {
-  width: 180px; /* Standard desktop size */
-  height: auto;
+  width: 300px; /* Standard desktop size */
+  height: 150px;
   max-height: 100px; /* Ensures it fits inside header */
+  object-fit: contain; /* Maintain aspect ratio */
 }
 
 /* Menu Styling */
@@ -334,13 +336,13 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  padding-top: 130px; /* Adds padding to account for the fixed header */
+  padding-top: 180px; /* Adds padding to account for the fixed header */
 }
 
 /* CSS Styles about-sections with highlight */
 .about-sections {
   max-width: 1200px;
-  margin: 80px auto;
+  margin: 20px auto;
   padding: 40px 20px;
   display: flex;
   align-items: flex-start;
@@ -431,7 +433,7 @@ body {
   padding: 2rem 1rem;
   position: relative;
   z-index: 1;
-  padding-top: 130px;
+  padding-top: 170px;
 }
 
 #commitment h2 {
@@ -515,7 +517,7 @@ body {
 .about-section {
   background-color: #fff;
   text-align: center;
-  padding: 80px 40px; /* Increase top padding to push content below the header */
+  padding: 110px 40px; /* Increase top padding to push content below the header */
   
 }
 
@@ -871,7 +873,7 @@ body {
 /*why choose us section*/
 
 .why-choose-us {
-  padding: 140px 20px 100px;  /* Add more top padding to account for the fixed header */
+  padding: 180px 20px 80px;  /* Add more top padding to account for the fixed header */
   background-image: url(b4.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -1301,7 +1303,7 @@ li {
   align-items: center;
   min-height: 100vh; /* Full viewport height */
   background-color: #fff; /* Optional: Add a background color */
-  padding: 150px 20px;
+  padding: 170px 20px;
 }
 hr{margin-top: 200px;}
 
