@@ -1330,13 +1330,18 @@ li {
   }
   .testimonial {
       width: 60%;
-      padding: 10px;
+      padding: 130px 30px 80px
+      
+    }
+    .prev, .next {
+        padding: 10px 14px;
+        font-size: 18px;
+    }
+    .prev { left: 10px; }
+    .next { right: 10px; }
   }
-  .prev, .next {
-      padding: 9px 13px;
-      font-size: 15px;
-  }
-}
+  
+  
 
 @media (max-width: 768px) {
   .testimonial-container {
