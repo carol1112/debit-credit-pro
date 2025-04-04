@@ -1868,3 +1868,43 @@ hr.hr-gradient {
       font-size: 0.95rem; /* Adjust content text size */
   }
 }
+
+/* Small mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .grid-container {
+      grid-template-columns: 1fr; /* 1 column for very small screens */
+      gap: 1rem; /* Reduce gap to fit content better */
+  }
+
+  h2 {
+      font-size: 1.8rem; /* Smaller header for smaller devices */
+  }
+
+  .job-card {
+      padding: 1rem;
+      margin-bottom: 1rem; /* Add margin between cards */
+  }
+
+  .job-header h3 {
+      font-size: 1.1rem; /* Adjust job title size for very small screens */
+  }
+
+  .job-content {
+      font-size: 0.9rem; /* Smaller font size for content */
+  }
+
+  .software {
+      font-size: 0.7rem; /* Reduce font size for software list */
+  }
+
+  .job-icon {
+      font-size: 1.2rem; /* Reduce icon size for small screens */
+      padding: 8px; /* Adjust padding for icons */
+  }
+
+  /* Adjust HR styles for small devices */
+  hr.hr-gradient {
+      margin: 1rem auto;
+      width: 70%; /* Further reduce width for small screens */
+  }
+}
