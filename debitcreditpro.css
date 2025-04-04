@@ -1795,9 +1795,9 @@ hr.hr-gradient {
   .grid-container {
       display: grid;
       grid-template-columns: 1fr; /* 1 column for mobile devices */
-      gap: 1rem; /* Adjust spacing for smaller screens */
+      gap: 1.5rem; /* Increase gap for better spacing */
       width: 100%;
-      padding: 1rem;
+      padding: 1rem; /* Add padding to the container */
   }
 
   .job-card {
@@ -1806,7 +1806,65 @@ hr.hr-gradient {
       justify-self: center; /* Center job cards */
   }
 
-  .grid-container > :last-child {
-      grid-column: auto; /* Reset alignment */
+  /* Ensure job-card content is properly aligned */
+  .job-header h3 {
+      font-size: 1.5rem; /* Adjust job title size */
+  }
+
+  .job-content {
+      font-size: 1rem; /* Adjust font size for readability */
+  }
+
+  .software {
+      font-size: 0.9rem; /* Make software list smaller */
+  }
+
+  /* Mobile phones (max-width: 767px) */
+  h2 {
+      font-size: 2rem; /* Slightly smaller header */
+      margin-bottom: 10px;
+  }
+
+  .job-card {
+      padding: 1rem;
+      margin: 0 auto; /* Ensure card is centered */
+      max-width: 100%;
+  }
+
+  .job-header h3 {
+      font-size: 1.2rem; /* Smaller font size for job titles */
+  }
+
+  .job-content {
+      font-size: 0.9rem; /* Slightly smaller content text */
+  }
+
+  .software {
+      font-size: 0.8rem; /* Smaller font size for software list */
+  }
+
+  /* Adjust HR styles for mobile */
+  hr.hr-gradient {
+      margin: 1rem auto;
+      width: 80%; /* Ensure it doesn’t stretch too wide */
+  }
+
+  /* Mobile phones (max-width: 767px) */
+  section {
+      padding-top: 120px; /* More top padding to avoid overlap */
+  }
+
+  .job-card {
+      padding: 1.5rem; /* Increase padding for better content spacing */
+      margin-bottom: 1rem; /* Add margin between cards */
+  }
+
+  .job-icon {
+      font-size: 1.5rem; /* Adjust icon size */
+      padding: 10px; /* Add padding for better visual spacing */
+  }
+
+  .job-content {
+      font-size: 0.95rem; /* Adjust content text size */
   }
 }
