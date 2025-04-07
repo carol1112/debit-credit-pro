@@ -1980,6 +1980,64 @@ hr.hr-gradient {
       margin: 0.5rem auto; /* Smaller margin for hr */
   }
 }
+/* All mobile phones (up to 767px wide) */
+@media (max-width: 767px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Always one column */
+    gap: 1.2rem;
+    padding: 1rem;
+  }
+
+  .job-card {
+    width: 100%;
+    padding: 1.2rem;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  .job-header {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .job-header h3 {
+    font-size: 1.3rem;
+  }
+
+  .job-icon {
+    font-size: 1.3rem;
+    width: 40px;
+    height: 40px;
+    padding: 0.5rem;
+  }
+
+  .job-content {
+    font-size: 1rem;
+  }
+
+  .software {
+    font-size: 0.85rem;
+    margin-top: 1rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  hr.hr-gradient {
+    width: 80%;
+    margin: 1rem auto;
+  }
+
+  section {
+    padding-top: 130px;
+    padding-bottom: 40px;
+  }
+}
+
 /*services*/
 .services-container {
   display: grid;
