@@ -1297,30 +1297,28 @@ li {
   .next { right: 10px; }
 }
 
-/* Laptops (1024px) */
+/* Mobile Phones (up to 767px) */
 @media (max-width: 1024px) {
   #testimonial {
-    padding: 60px 30px 30px; /* Adjusted for better visibility */
+    padding: 40px 15px 20px; /* Less padding for smaller screens */
   }
+
   .testimonial-container {
-    padding: 0 20px;
-  }
-  .testimonial-container {
-    padding: 0 20px;
-    margin-top: 10px; /* Added to reduce the space between heading and container */
+    padding: 0 10px;
+    margin-top: 5px; /* Tighter spacing below heading */
   }
 
   .testimonial {
-    width: 85%;
-    padding: 10px;
+    width: 100%; /* Full width on mobile */
+    padding: 8px; /* Slightly smaller padding inside the card */
   }
 
   #testimonial h2 {
-    font-size: 2rem;
-    margin-bottom: 5px; /* Decrease the space below the heading */
-    padding: 5px 0; /* Reduce unnecessary top/bottom padding */
-  }}
-
+    font-size: 1.5rem; /* Adjust heading size for mobile */
+    margin-bottom: 5px;
+    padding: 0; /* Remove extra top/bottom padding */
+  }
+}
 /* Tablets (768px) */
 @media (max-width: 768px) {
   #testimonial {
