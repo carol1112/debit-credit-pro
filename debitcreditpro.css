@@ -1300,7 +1300,7 @@ li {
 /* Laptops (1024px) */
 @media (max-width: 1024px) {
   #testimonial {
-    padding: 100px 30px 30px; /* Adjusted for better visibility */
+    padding: 60px 30px 30px; /* Adjusted for better visibility */
   }
   .testimonial-container {
     padding: 0 20px;
