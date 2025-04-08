@@ -1299,7 +1299,7 @@ li {
 /* Mobile Phones (up to 1024px) */
 @media (max-width: 1024px) {
   #testimonial {
-    padding: 120px 15px 20px; /* Reduced padding for better use of space */
+    padding: 160px 15px 20px; /* Reduced padding for better use of space */
   }
 
   .testimonial-container {
