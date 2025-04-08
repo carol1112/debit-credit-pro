@@ -1299,7 +1299,7 @@ li {
 /* Mobile Phones (up to 1024px) */
 @media (max-width: 1024px) {
   #testimonial {
-    padding: 80px 15px 20px; /* Reduced padding for better use of space */
+    padding: 120px 15px 20px; /* Reduced padding for better use of space */
   }
 
   .testimonial-container {
@@ -1323,7 +1323,7 @@ li {
 /* Tablets (768px) */
 @media (max-width: 768px) {
   #testimonial {
-    padding: 100px 15px 40px; /* Reduced padding for better alignment */
+    padding: 130px 15px 40px; /* Reduced padding for better alignment */
   }
 
   .testimonial-container {
