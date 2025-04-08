@@ -1300,7 +1300,7 @@ li {
 /* Mobile Phones (up to 767px) */
 @media (max-width: 1024px) {
   #testimonial {
-    padding: 40px 15px 20px; /* Less padding for smaller screens */
+    padding: 70px 15px 20px; /* Less padding for smaller screens */
   }
 
   .testimonial-container {
