@@ -1296,44 +1296,55 @@ li {
   .prev { left: 10px; }
   .next { right: 10px; }
 }
-
-/* Mobile Phones (up to 767px) */
+/* Mobile Phones (up to 1024px) */
 @media (max-width: 1024px) {
   #testimonial {
-    padding: 70px 15px 20px; /* Less padding for smaller screens */
+    padding: 40px 15px 20px; /* Reduced padding for better use of space */
   }
 
   .testimonial-container {
     padding: 0 10px;
-    margin-top: 5px; /* Tighter spacing below heading */
+    margin-top: 5px; /* Reduced space below heading */
   }
 
   .testimonial {
-    width: 100%; /* Full width on mobile */
-    padding: 8px; /* Slightly smaller padding inside the card */
+    width: 100%; /* Full width on smaller screens */
+    padding: 10px; /* Adequate padding for readability */
   }
 
   #testimonial h2 {
-    font-size: 1.5rem; /* Adjust heading size for mobile */
-    margin-bottom: 5px;
-    padding: 0; /* Remove extra top/bottom padding */
+    font-size: 1.5rem; /* Adjusted heading size for mobile */
+    margin-bottom: 10px; /* Reduced bottom margin to avoid excessive space */
+    padding: 0; /* Removed extra padding */
+    z-index: 9999; /* Ensure heading stays visible above other elements */
   }
 }
+
 /* Tablets (768px) */
 @media (max-width: 768px) {
   #testimonial {
-    padding: 120px 20px 80px;
+    padding: 70px 15px 40px; /* Reduced padding for better alignment */
   }
+
   .testimonial-container {
     padding: 0 15px;
+    margin-top: 10px; /* Slightly reduced space between heading and content */
   }
+
   .testimonial {
     width: 90%;
-    padding: 20px;
+    padding: 15px; /* Slightly reduced padding for better balance */
   }
+
   .prev, .next {
-    padding: 9px 12px;
-    font-size: 18px;
+    padding: 8px 10px;
+    font-size: 16px; /* Slightly smaller button size */
+  }
+
+  #testimonial h2 {
+    font-size: 1.8rem; /* Adjust heading size for tablets */
+    margin-bottom: 8px; /* Adjusted space under heading */
+    padding: 0;
   }
 }
 
