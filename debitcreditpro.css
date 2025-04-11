@@ -237,7 +237,7 @@ header {
   }
   #home {
    
-    padding-top: 40px; /* Reduced space above video on laptops */
+    padding-top: 0px; /* Reduced space above video on laptops */
   }
  
 }
