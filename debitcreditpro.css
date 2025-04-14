@@ -200,68 +200,143 @@ header {
 }
 
 
-/* Home Section Styling */
+/* Base reset and full viewport sizing */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+
 #home {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 80vh;
-  background: #060606;
-  padding: 20px;
-  overflow: hidden;
+  height: 100vh;
+  padding: 10px;
+  box-sizing: border-box;
+  background:black;
+  padding-top: 0PX;
+}
+
+.video-container {
   position: relative;
-  padding-top: 100px;
+  width: 90%;
+  max-width: 800px; /* Reduced from 1000px */
+  margin: 0 auto;
 }
 
-/* Video Styling */
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  background: #000;
+}
+
 #bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  max-width: 800px;
-  height: auto;
-  aspect-ratio: 16 / 9;
-  object-fit: contain;   /* Ensures full video content stays visible */
-  border-radius: 12px;
-  display: block;
+  height: 100%;
+  object-fit: contain;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 1440px) {
-  #bg-video {
-    max-width: 700px;
+/* Responsive adjustments */
+
+/* Large desktops (1200px and up) */
+@media (min-width: 1200px) {
+  .video-container {
+      max-width: 800px; /* Reduced from 900px */
   }
 }
 
-@media (max-width: 1024px) {
-  #bg-video {
-    max-width: 600px;
+ /* Laptops (992px - 1199px) - SPECIFICALLY REDUCED */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  
+  #home {
+      height: 70vh;
+      padding-top: 0px; /* Minimal top spacing */
+      padding-bottom: 10px;
+     
+  }
+  .video-container {
+      max-width: 500px; /* Even more compact */
+      width: 80%; /* Takes less horizontal space */
+      margin: auto; /* Perfect centering */
+  }
+  .video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    border-radius: 10px;
+    box-shadow: 0 8px 10px rgba(0,0,0,0.15);
+    background: #000;
+  }
+}
+/* Tablets (768px - 991px) - Reduced size */
+@media (min-width: 768px) and (max-width: 991px) {
+  .video-container {
+      max-width: 550px; /* Reduced from 700px */
+      width: 85%;
   }
   #home {
-   
-    padding-top: 0px; /* Reduced space above video on laptops */
+      padding: 15px;
   }
- 
-}
-
-@media (max-width: 768px) {
-  #bg-video {
-    max-width: 90%;
+  .video-wrapper {
+      border-radius: 6px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   }
 }
 
-@media (max-width: 480px) {
-  #bg-video {
-    max-width: 95%;
+/* Large phones (576px - 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+  .video-container {
+      width: 90%;
+      max-width: 500px;
   }
-  
-}
-
-@media (max-width: 400px) {
-  #bg-video {
-    max-width: 100%;
+  .video-wrapper {
+      border-radius: 6px;
   }
 }
 
+/* Small phones (up to 575px) */
+@media (max-width: 575px) {
+  #home {
+      padding: 10px;
+      height: auto;
+      min-height: 100vh;
+  }
+  .video-container {
+      width: 100%;
+  }
+  .video-wrapper {
+      padding-bottom: 75%;
+      border-radius: 0;
+      box-shadow: none;
+  }
+}
 
+/* Orientation adjustments */
+@media (orientation: portrait) and (max-width: 767px) {
+  .video-wrapper {
+      padding-bottom: 75%;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 767px) {
+  #home {
+      height: auto;
+      padding: 5px;
+  }
+  .video-wrapper {
+      padding-bottom: 50%;
+  }
+}
 
 
 /*==================== about section ====================*/
