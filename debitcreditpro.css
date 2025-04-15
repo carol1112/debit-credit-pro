@@ -270,12 +270,9 @@ html, body {
       margin: auto; /* Perfect centering */
   }
   .video-wrapper {
-    position: relative;
+ 
     padding-bottom: 56.25%; /* 16:9 aspect ratio */
-    height: 0;
-    border-radius: 10px;
-    box-shadow: 0 8px 10px rgba(0,0,0,0.15);
-    background: #000;
+    
   }
 }
 /* Tablets (768px - 991px) - Reduced size */
@@ -724,6 +721,13 @@ body {
     width: 80%;
     max-width: 400px;
   }
+  .about-section {
+    background-color: #fff;
+    text-align: center;
+    padding: 120px 40px; /* Increase top padding to push content below the header */
+    
+  }
+  
 }
 
 @media (max-width: 768px) {
@@ -739,7 +743,7 @@ body {
 
 @media (max-width: 480px) {
   .about-section {
-    padding: 60px 20px;
+    padding: 80px 20px;
   }
 
   .about-section h2 {
