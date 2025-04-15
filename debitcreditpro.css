@@ -510,7 +510,7 @@ html, body {
 /*==================== Small Phones (Up to 600px) ====================*/
 @media (max-width: 600px) {
   #about {
-    padding-top: 100px;
+    padding-top: 130px;
   }
 
   .about-image img {
