@@ -91,7 +91,7 @@ background-size: cover;
 }
 
 .dropdown-menu li a:hover {
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: blue;
   color: red;
   text-decoration: underline;
 
@@ -178,7 +178,7 @@ background-size: cover;
     top: 100%;
     left: 0;
     width: 100%;
-    background: purple;
+    background:blue;
     padding: 10px 0;
     gap: 5px;
   }
